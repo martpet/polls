@@ -1,0 +1,11 @@
+export const ALL_PATH = "/all";
+export const AUTH_PATH = "/auth";
+export const GOOGLE_AUTH_PATH = "/auth/google";
+export const ADMIN_PATH = "/admin";
+export const PRIVACY_POLICY_PATH = "/privacy-policy";
+export const VALIDATE_ACCOUNT_PATH = "/validate-account";
+export const SIGN_IN_PATH = `${AUTH_PATH}/signin`;
+export const SIGN_OUT_PATH = `${AUTH_PATH}/signout`;
+export const ME_PATH = "/me";
+export const DELETE_ME_PATH = `${ME_PATH}/delete`;
+export const DOWNLOAD_MY_DATA_PATH = `${ME_PATH}/download`;

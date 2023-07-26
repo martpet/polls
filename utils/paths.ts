@@ -1,0 +1,10 @@
+export const AUTH_PATH = "/auth";
+export const SIGN_IN_PATH = `${AUTH_PATH}/signin`;
+export const SIGN_OUT_PATH = `${AUTH_PATH}/signout`;
+export const VALIDATE_PHONE_PATH = "/validate-phone";
+export const PRIVACY_POLICY_PATH = "/privacy-policy";
+export const CONTACTS_PATH = "/contacts";
+export const ADMIN_PATH = "/admin";
+export const PROFILE_PATH = "/profile";
+export const PROFILE_RESET_PATH = `${PROFILE_PATH}/reset`;
+export const DOWNLOAD_MY_DATA_PATH = `${PROFILE_PATH}/download`;

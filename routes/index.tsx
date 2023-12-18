@@ -35,6 +35,7 @@ export default function HomePage({ data, url }: PageProps<Data>) {
       center={false}
       blankSlate={!polls.length && !groups.length && <AdminIntro />}
       isLogoLink={false}
+      class="!pt-6 !pb-4"
     >
       <PollsList
         polls={polls}

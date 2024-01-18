@@ -457,15 +457,16 @@ export async function resetDB() {
 /*
  * Reset db every week
  */
-if (checkDemo()) {
-  Deno.cron(
-    "Delete the database every Sunday at midnight",
-    "0 0 * * SUN",
-    async () => {
+
+Deno.cron(
+  "Delete the database every Sunday at midnight",
+  "0 0 * * SUN",
+  async () => {
+    if (checkDemo()) {
       const rows = kv.list({ prefix: [] });
       for await (const row of rows) {
         kv.delete(row.key);
       }
-    },
-  );
-}
+    }
+  },
+);

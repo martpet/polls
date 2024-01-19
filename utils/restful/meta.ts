@@ -46,6 +46,7 @@ const formatters: ResourceFieldFormatter<Resource> = {
 const polls: ResourceMeta<Poll> = {
   attrLabels: {
     ...attrLabels,
+    title: "Заглавие",
     createdAt: "Създадена",
     disabled: "Спряна",
     ipCityFilter: "IP филтриране по град",

@@ -16,7 +16,7 @@ export default function Footer(props: FooterProps) {
 
   if (!hidePrivacyPolicy) {
     links.push({
-      text: "Декларация за поверителност",
+      text: "Поверителност",
       url: PRIVACY_POLICY_PATH,
     });
   }

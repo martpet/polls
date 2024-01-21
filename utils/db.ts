@@ -1,5 +1,5 @@
 import checkIndexes from "🛠️/db-index-check.ts";
-import { checkDemo, checkProd, getHost, getHostname } from "🛠️/host.ts";
+import { checkProd, getHost, getHostname } from "🛠️/host.ts";
 import { roundDownTo5Minutes } from "🛠️/misc.ts";
 import { Choice, Group, OauthSession, Poll, User } from "🛠️/types.ts";
 
@@ -459,14 +459,12 @@ export async function resetDB() {
  */
 
 Deno.cron(
-  "Delete the database every Sunday at midnight",
+  "Delete the DEMO database every Sunday at midnight",
   "0 0 * * SUN",
   async () => {
-    if (checkDemo()) {
-      const rows = kv.list({ prefix: [] });
-      for await (const row of rows) {
-        kv.delete(row.key);
-      }
+    const rows = kv.list({ prefix: ["polls.deno.dev"] });
+    for await (const row of rows) {
+      kv.delete(row.key);
     }
   },
 );
